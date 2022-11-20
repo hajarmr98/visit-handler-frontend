@@ -6,6 +6,6 @@ export const requestOptions = (method:string = 'GET', body: any = undefined):any
         headers: body && { 
             'Content-Type' : 'application/json'
         },
-        body: body && JSON.stringify(body)
+        body: JSON.stringify(body)
     }
 };
