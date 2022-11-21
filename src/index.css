@@ -2,11 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+
+.flex-row-between{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flex-row-around{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.text-green {
+  color: green;
+}
+.text-red {
+  color: red;
+}
+.reditect-button {
+  position: absolute;
+  background-color: rgb(37, 99, 235 );
+  padding: 16px 16px;
+  border-radius: 6px;
+  color: #FFF;
+  right: 10%;
+  top: 50px;
+  min-width: 100px;
+}

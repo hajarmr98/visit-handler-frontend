@@ -1,6 +1,7 @@
 <template>
     <main class="flex flex-col items-center justify-center h-screen bg-gray-200">
-        <h1 class="text-blue-900 mb-10">Bienvenido a Visit Handler</h1>
+        <button class="reditect-button" v-on:click="handlePush">Formulario del visitante</button>
+        <h1 class="text-2xl	text-blue-900 mb-10">Bienvenido a Visit Handler</h1>
         <form v-on:submit="handleLogin">
             <div class="flex flex-col bg-gray-100 w-96 p-6 rounded shadow-sm">
                 <label class="text-gray-800">Email o Username</label>
@@ -14,7 +15,7 @@
 </template>
 
 <script>
- import { login, getAllVisits } from "../services";
+ import { login } from "../services";
  import router from '../routes/routes';
 
 
@@ -29,6 +30,10 @@
             
             if (res.success)
                 router.push({ path: "/dashboard"})
+        },
+        handlePush: async (e) => {
+            e.preventDefault()
+            router.push({ path: "/visitor-form"})
         }
     }
 }
