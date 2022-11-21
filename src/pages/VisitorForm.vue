@@ -26,7 +26,6 @@
  import { postVisit } from "../services";
  import router from '../routes/routes';
 
-
  export default {
     methods: {
         handleForm: async (e) => {
