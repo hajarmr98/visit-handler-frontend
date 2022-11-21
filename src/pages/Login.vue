@@ -14,7 +14,10 @@
 </template>
 
 <script>
- import { login } from "../services"
+ import { login, getAllVisits } from "../services";
+ import router from '../routes/routes';
+
+
  export default {
     methods: {
         handleLogin: async (e) => {
@@ -23,9 +26,9 @@
                 usernameOrEmail: e.target[0].value,
                 password: e.target[1].value,
             })
-            console.log("res",res)
+            
             if (res.success)
-                $router.push({ name: "/dashboard"})
+                router.push({ path: "/dashboard"})
         }
     }
 }
